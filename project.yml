@@ -1,10 +1,10 @@
-name: AutoTemplate
+name: Template
 groupSortPosition: top
 configFiles:
   Debug: xcconfigs/Debug.xcconfig
   Release: xcconfigs/Release.xcconfig
 targets:
-  AutoTemplate:
+  Template:
     type: application
     platform: iOS
     deploymentTarget: "10.0"
@@ -14,7 +14,7 @@ targets:
         Release: xcconfigs/Template-Release.xcconfig
     dependencies:
         - carthage: XCGLogger
-  AutoTemplateTests:
+  TemplateTests:
     type: bundle.unit-test
     platform: iOS
     sources: [TemplateTests]
@@ -22,8 +22,8 @@ targets:
         Debug: xcconfigs/TemplateTests-Debug.xcconfig
         Release: xcconfigs/TemplateTests-Release.xcconfig
     dependencies:
-      - target: AutoTemplate
-  AutoTemplateUITests:
+      - target: Template
+  TemplateUITests:
     type: bundle.ui-testing
     platform: iOS
     sources: [TemplateUITests]
@@ -31,4 +31,4 @@ targets:
         Debug: xcconfigs/TemplateUITests-Debug.xcconfig
         Release: xcconfigs/TemplateUITests-Release.xcconfig
     dependencies:
-      - target: AutoTemplate
+      - target: Template
